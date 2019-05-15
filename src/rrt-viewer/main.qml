@@ -141,12 +141,12 @@ ApplicationWindow {
         // draw and interact with the rrt
         RRTWidget {
             // Fixed size
-            Layout.maximumHeight: 600
-            Layout.maximumWidth: 1200
-            Layout.preferredHeight: 600
-            Layout.preferredWidth: 900
-            Layout.minimumHeight: 600
-            Layout.minimumWidth: 600
+            Layout.maximumHeight: 800
+            Layout.maximumWidth: 1800
+            Layout.preferredHeight: 800
+            Layout.preferredWidth: 1800
+            Layout.minimumHeight: 800
+            Layout.minimumWidth: 800
 
             id: rrt
         }
