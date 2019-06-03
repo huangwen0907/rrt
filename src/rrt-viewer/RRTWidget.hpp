@@ -80,6 +80,7 @@ protected:
 private:
     std::shared_ptr<RRT::GridStateSpace> _stateSpace;
     std::unique_ptr<RRT::BiRRT<Eigen::Vector2d>> _biRRT;
+    std::unique_ptr<RRT::BiRRT<Eigen::Vector2d>> _biRRT1;
 
     Eigen::Vector2d _startVel, _goalVel;
 
@@ -95,9 +96,18 @@ private:
         DraggingGoalVel
     } _draggingItem;
 
+      enum {
+        DraggingNone1 = 0,
+        DraggingStart1,
+        DraggingGoal1,
+        DraggingStartVel1,
+        DraggingGoalVel1
+    } _draggingItem1;
+
     int _waypointCacheMaxSize;
 
     std::vector<Eigen::Vector2d> _previousSolution;
+    std::vector<Eigen::Vector2d> _previousSolution1;
 
     QTimer* _runTimer;
 };
